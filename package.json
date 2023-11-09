@@ -1,7 +1,7 @@
 {
   "name": "reveal.js",
   "version": "5.0.1",
-  "description": "The HTML Presentation Framework",
+  "description": "Frontend Roadmap",
   "homepage": "https://revealjs.com",
   "subdomain": "revealjs",
   "main": "dist/reveal.js",
@@ -13,21 +13,15 @@
     "build": "gulp build"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "https://hakim.se"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "name": "Emilio Quilodran",
+    "email": "emilio.lihue.q@gmail.com",
+    "web": "https://emiqdev.netlify.app/"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "keywords": [
-    "reveal",
-    "slides",
-    "presentation"
+    "presentation Frontend"
   ],
   "devDependencies": {
     "@babel/core": "^7.23.2",

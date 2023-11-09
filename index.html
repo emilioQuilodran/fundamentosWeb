@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>reveal.js</title>
-
+		<!--recurso externo-->
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
@@ -16,8 +16,254 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<img src="examples/assets/roadmap.png" alt="" srcset="">
+				</section>
+				<section>
+						<section>
+							<!--estilos en linea-->
+                            <h2 style="color: blueviolet;">Fundamentos</h2>
+							<h5>Como funciona Internet</h5>
+							<p style="font-size: .8em;">Vamos a ver una vista simplificada de lo que sucede cuando vemos una página web en un navegador desde la computadora o teléfono.</p>
+							<h5>Clientes y Servidores</h5>
+							<p  style="font-size: .8em;">Las computadoras conectadas a la web se llaman clientes y servidores. Un diagrama simplificado de cómo interactúan se vería así:</p>
+						</section>
+					    
+						<section>
+							<img src="examples/assets/simple-client-server.png" alt="" srcset="" />
+							<ul style="font-size: 1.5rem;">
+							<li>
+								<p>Los clientes son dispositivos de los usuarios conectados a Internet (por ejemplo, tu ordenador conectado a la red Wi-Fi o el teléfono conectado a la red de telefonía móvil) y el software que se encuentra disponible y permite acceder a Internet en dichos dispositivos (normalmente, un navegador web como Firefox o Chrome).</p>
+							</li>
+							<li>
+								<p>
+									Los servidores son computadores que almacenan páginas web, sitios o aplicaciones. Cuando un dispositivo cliente quiere acceder a una página web, una copia de la página web se descarga desde el servidor en el equipo cliente y se muestra en el navegador web del usuario.
+								</p>
+							</li>
+						</ul>
+						</section>
+				</section>
+				<section>
+					<section>
+						<h2 style="color: blueviolet;">FRONTEND</h2>
+						<p style="font-size: .8em;">
+							Un desarrollador front-end es aquel que maneja toda la parte visual de un proyecto
+							web, es decir, toda parte que entra en interacción con el usuario mediante el cliente
+							(navegador).
+						</p>
+						<p style="font-size: .8em;">
+							Por tanto, este perfil de desarrollador deberá enfocarse en los siguientes aspectos:
+						</p>
+						<ul style="font-size: .8em;">
+							<li>
+								<p style="font-size: .8em;">
+									Interacciones
+								</p>
+							</li>
+							<li>
+								<p style="font-size: .8em;">
+									Animaciones
+								</p>
+							</li>
+							<li>
+								<p style="font-size: .8em;">
+									Estilos
+								</p>
+							</li>
+							<li>
+								<p style="font-size: .8em;">
+									Navegación
+								</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4  style="color: blueviolet;">Estándares de desarrollo</h4>
+						<p style="font-size: .8em;">
+							En el front encontramos tres estándares que son fundamentales para el desarrollo
+							web, estos son:
+						</p>
+						<p style="font-size: .8em;">
+							<strong style="color: blueviolet;">HTML</strong>: un lenguaje de referencia, o como sus siglas lo indican, un “Lenguaje de 
+							Marcas de Hipertexto” (HyperText Markup Language), que permite estructurar un documento mediante etiquetas
+						</p>
+						<p style="font-size: .8em;">
+							<strong style="color: blueviolet;">CSS</strong>: un lenguaje utilizado para definir el diseño de un documento previamente
+							escrito en un lenguaje de referencia. Sus siglas indican “Hojas de estilo en cascada”
+						</p>
+						<p style="font-size: .8em;">
+							<strong style="color: blueviolet;">JavaScript</strong>: un lenguaje de programación que indicará al navegador que tareas
+							deberá realizar. Es un lenguaje de programación basado en prototipos, por tanto,
+							se podría definir como orientado a objetos
+						</p>
+					</section>
+					<section>
+						<img src="examples/assets/body.png" alt="" srcset="">
+						<p style="font-size: .8em;">
+							De momento solo abarcaremos los dos primeros estándares, es decir, HTML y CSS. Sin embargo, 
+							es importante comprender la importancia de cada uno de ellos en la estructura de todo proyecto web.
+						</p>
+
+					</section>
+					<section>
+						<h2 style="color: blueviolet;">HTML</h2>
+						<h5>Anatomía de una página web</h5>
+						<img src="examples/assets/structure.png" alt="" srcset="">
+					</section>
+					<section>
+						<h5>Index y su estructura básica: </h5>
+						<p style="font-size: .8em;">
+							El head es aquella parte de la estructura del index.html que va a llamar a todos los 
+							archivos importantes que necesita la página web para su correcto funcionamiento y que no deben ser visibles por los usuarios
+				        </p>
+
+					</section>
+					<section data-auto-animate>
+						<h2 data-id="code-title">Ejemplo</h2>
+						<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers="|4,8-11|17|22-24"><script type="text/template">
+							<!DOCTYPE html>
+							<!--Le decimos al navegador que este archivo es del tipo html:5-->
+							<html lang="es">
+								<!--Es la etiqueta "padre" donde vivirá nuestro proyecto. El atributo lang
+									establece el idioma del sitio web.
+									Debemos usarlo para que el navegador pueda traducir nuestra página-->
+									<head>
+										<meta charset="UTF-8" />
+										<!--Este atributo nos ayuda a la hora de incluir caracteres especiales y emojis en nuestro proyecto-->
+										<meta name="description"content="Descripción aquí" />
+										<!--Muestra una descripción de nuestro sitio en los buscadores-->
+										<meta name="robots"content="index,follow" />
+										
+										<!--Le dice a los robots de los navegadores que rastreen nuestra página
+											y la muestran en las búsquedas-->
+											<title>Mi página</title>
+											<!--Título de nuestra página, no confundir con los H1-H6. Este titulo es
+												el que ves en la pestaña del navegador-->
+												<meta name="viewport"content="width=device-width, initial-scale=1.0" />
+												<!--Nos ayuda a trabajar en proyectos reponsive-->
+												<link rel="stylesheet"href="./css/style.css">
+												<!--Linkea/Enlaza archivos de estilos u otros archivos que necesitemos
+													en nuestro proyecto-->
+												</head>
+											</script></code></pre>
+					</section>
+					<section>
+						<h2 data-id="code-title">Index y su estructura básica: <body></h2>
+						<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers="|4,8-11|17|22-24"><script type="text/template">
+							<body>
+								<header><!--Sección superior de nuestro website-->
+								<nav></nav><!--Sección de navegación de nuestro website, siempre
+								dentro del header-->
+								</header>
+								<main>
+									<!--Main es el contenido central de nuestro website, "la parte del medio"-->
+									<section>
+										<!--Nuestro website puede estar divido por secciones, esto facilita
+										mucho el trabajo de organización-->
+										<article>
+										<!--Contenido independiente de la página. Es reutilizable-->
+										</article>
+										</section>
+										<ul><!--Lista desordenada: Sin numerar-->
+										<li><!--Item List. Elementos de la lista--></li>
+										</ul>
+										<ol></ol><!--Lista ordenada: Numerada-->
+										</main>
+										<footer><!--Sección final de nuestro website-->
+										</footer>
+										<p>Soy un texto</p><!--Párrafo, texto-->
+										<h1>Soy un titulo</h1>
+										<!--Títulos, muestran el texto más grande y con negrilla. Existen desde
+										el h1 al h6-->
+										<a href="#">Soy un link</a>
+										<!--Enlaces/links que nos permitirán movernos entre páginas.-->
+										</body>
+						</script></code></pre>
+					</section>
+					<section>
+						<h2>Anatomía de una etiqueta HTML</h2>
+						<p>
+							Las etiquetas HTML tienen una estructura básica. Algunas etiquetas tendrán que
+							cerrarse una vez se llaman, esto se hace con un “/”, de esta manera: <p>Aquí va el
+								contenido que aloja la etiqueta</p>
+						</p>
+					</section>
+
+				</section>
+				<section>
+					<section>
+						<h2 style="color: blueviolet;">QUE ES CSS</h2>
+						<p style="font-size: .8em;">
+							CSS es el segundo lenguaje más básico y esencial para crear páginas web. El primero sería HTML, con el que se define el contenido de la página. El segundo CSS, con el que se define la parte de la presentación, es decir, cómo deben mostrarse los elementos de la página, su posición, forma, espaciados, colores y en resumen, toda la parte estética
+						</p>
+						<div style="background-color: whitesmoke;">
+							<img src="examples/assets/html_css.svg" alt="" srcset="" />
+						</div>
+					</section>
+					<section>
+						<h2 style="color: blueviolet;">Sintaxis Básica de CSS</h2>
+						<p style="font-size: .5em;">
+							Se considera sintaxis al orden y relación de los elementos que componen una correcta instrucción CSS así como las funciones que cumplen.
+						</p>
+						<img src="examples/assets/sintaxis_css.svg" alt="" srcset="" />
+					</section>
+					<section>
+						<h2 style="color: blueviolet;">Modelo de caja</h2>
+						<p style="font-size: .5em;">
+							En general podemos decir que todos los elementos HTML están contenidas en cajas rectangulares; es decir, para CSS cada elemento presente en una página HTML está dentro de una caja; de tal manera que elementos como títulos, párrafos, imágenes, listas, videos, iconos, etc. están dentro de una caja rectangular y el conjunto de ellas son elementos que forma una página web.
+						</p>
+						<img src="examples/assets/boxs_guia_virtual.png" alt="" srcset="" />
+					</section>
+					<section>
+						<h2 style="color: blueviolet;">Diagrama del Modelo de Caja CSS</h2>
+						<p style="font-size: .5em;">
+							El siguiente diagrama muestra cómo se relacionan estas áreas y la terminología utilizada para referirse a las diversas partes de la caja:
+						</p>
+						<div style="background-color: whitesmoke;">
+							<img src="examples/assets/model_box.svg" alt="" srcset="" />
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2 style="color: blueviolet;">Atomic Design</h2>
+						<p style="font-size: .6em;">
+							Es una metodología que consiste en identificar los elementos más pequeños e indivisibles de una interfaz para poder combinarlos y crear nuevos elementos más complejos y con diferentes funcionalidades, lo que da pie a la creación de un sistema de diseño. Brad Frost, su creador, divide el diseño atómico en cinco niveles diferentes: 
+						</p>
+					</section>
+					<section>
+						<h2 style="color: blueviolet;">Átomos</h2>
+						<p style="font-size: .5em;">
+							Es la estructura más pequeña e indivisible de un sistema de diseño, por ejemplo: iconos, estilos de texto, paleta de colores, campos de texto, avatares, etiquetas. 
+						</p>
+						<img src="examples/assets/atomos_atomicdesign.png" alt="" srcset="" />
+					</section>
+					<section>
+						<h2 style="color: blueviolet;">Moléculas</h2>
+						<p style="font-size: .5em;">
+							Están formadas por dos o más átomos y crean un elemento más complejo, por ejemplo, el campo de texto con su etiqueta, un botón formado por un icono y un texto, el conjunto de un avatar con la información de la persona. 
+						</p>
+						<img src="examples/assets/moleculas_atomicdesign.png" alt="" srcset="" />
+					</section>
+					<section>
+						<h2 style="color: blueviolet;">Organismos</h2>
+						<p style="font-size: .5em;">
+							Es la unión de dos o más moléculas, lo que resulta en elementos con un mayor nivel de complejidad que las moléculas, por ejemplo, un listado de usuarios (dos o más avatares con su información), un formulario (varios campos de texto con su etiqueta y un botón de enviar), un menú de navegación (dos o más botones iconográficos con el CTA correspondiente). 
+						</p>
+						<img src="examples/assets/organismos_atomicdesign.png" alt="" srcset="" />
+					</section>
+					<section>
+						<h2 style="color: blueviolet;">Plantillas y Páginas</h2>
+						<h5 style="color: blueviolet;">Plantillas</h5>
+						<p style="font-size: .7em;">
+							Es lo que conocemos como wireframes o templates. Es el uso y combinación de varios organismos que forman una sección en un sitio web o aplicación, o el esqueleto de un template. 
+						</p>
+						<h5 style="color: blueviolet;">Páginas</h5>
+						<p style="font-size: .7em;">
+							Es el último nivel de esta metodología y se logra aplicando el User Interface (UI) a las plantillas, es decir, es el diseño final
+						</p>
+					</section>
+				</section>
 			</div>
 		</div>
 
